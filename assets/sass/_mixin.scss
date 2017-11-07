@@ -1,0 +1,11 @@
+@mixin title(){
+	color: $fontColorTitle;
+	font-family: 'Raleway', sans-serif;
+	font-size: 3rem;
+	text-align: center;
+}
+@mixin centerContent(){
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
