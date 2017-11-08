@@ -11,9 +11,27 @@
    	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
-	<section class="section-moves">
-	  	<div class="row">
-	   		<div class="col hide-on-small-and-down l1 xl1 side-menu">
+	<div class="nav hide-on-med-and-up">
+	    <div class="nav-wrapper">
+	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+	      <ul class="right hide-on-med-and-down">
+	        <li><a href="sass.html">Tool one</a></li>
+	        <li><a href="badges.html">Tool two</a></li>
+	        <li><a href="collapsible.html">Tool three</a></li>
+	        <li><a href="mobile.html">Tool four</a></li>
+	      </ul>
+	      <ul class="side-nav" id="mobile-demo">
+	        <li><a href="sass.html">Tool one</a></li>
+	        <li><a href="badges.html">Tool two</a></li>
+	        <li><a href="collapsible.html">Tool three</a></li>
+	        <li><a href="mobile.html">Tool four</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+	<section class="section-moves hide-on-small-and-down">
+	  	<div class="row ">
+	   		<div class="col l1 xl1 side-menu">
 	   			<a class="btn-floating btn-medium blue lighten-1" >
 	   			    <i class="large material-icons">backup</i>
 	   			</a>
@@ -24,7 +42,7 @@
 	   			    <i class="large material-icons">build</i>
 	   			</a>
 	   			<a href="#" class="btn-floating btn-medium blue lighten-1 sub-menu-button">
-	   				<i class="large material-icons">people</i>
+	   				<i class="large material-icons">call</i>
 	   			</a>
 		  	</div>
 	  		<div class="col s11 m11 l11 xl11 landing-home">
@@ -42,7 +60,7 @@
 		  					</a>
 		  				</li>
 		  				<li class="sub-menu-option animated">
-		  					<a class="btn-floating red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Iniciar Video-chat"><i class="material-icons">linked_camera</i></a>
+		  					<a class="btn-floating red tooltipped video-llamada-on" data-position="bottom" data-delay="50" data-tooltip="Iniciar Video-chat"><i class="material-icons">linked_camera</i></a>
 		  				</li>
 		  			</ul>
 		  		</div>
@@ -51,7 +69,7 @@
 		  				<div class="carousel carousel-slider" data-indicators="true">
 		  					<div class="row carousel-item" href="#one!">
 		  						<div class="col s9 m9 l9 xl9">
-		  							<img src="assets/img/logo-crossnet.png" class="responsive-img">
+		  							<img src="assets/img/acuerdo.jpg" class="responsive-img">
 		  						</div>
 		  						<div class="col s3 m3 l3 xl3 text-information">
 		  							<h3>Crossnet</h3>
@@ -79,41 +97,58 @@
 		  				</div>
 		  			</div>
 		  		</div>
+		  		<section class="video-call-section">
+		  			<div class="row">
+		  				<div class="col m12 l12 xl12 show-medium-and-up">
+		  					<h1>kjsdhfkladjshflkjsdhf</h1>
+		  					<i class="material-icons">close</i>
+		  				</div>
+		  			</div>
+		  		</section>
 	  		</div>
 	  	</div>
 	</section>
-	<section class="section-cards">
+	<section class="section-cards hide-on-small-and-down">
 		<div class="row">	
-			<div class="col s3 m3 l3 xl3 twitter-card">
-				<div class="row">
-					<div class="col m3 l3 xl3">
-						<a href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-					</div>
-					<div class="col m6 l6 xl6">
-						<a href="https://twitter.com/intent/tweet?screen_name=TwitterDev&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-lang="es" data-show-count="false">Tweet to @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-					</div>
-				</div>
+			<div class="col s3 m3 l3 xl3 card-option hoverable twitter-card">
 				<a class="twitter-timeline" data-lang="es" data-theme="dark" data-link-color="#2B7BB9" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>	
-			<div class="col s4 m4 l4 xl4">
-				<h1>section one</h1>
+			<div class="col s4 m4 l4 xl4 card-option hoverable center">
+				<h4>SECTION ONE</h4>
 			</div>
-			<div class="col s4 m4 l4 xl4">
-				<h1>section one</h1>
+			<div class="col s4 m4 l4 xl4 card-option hoverable center">
+				<h4>SECTION  TWO</h4>
 			</div>
-			
-			
 		</div>
 	</section>
-	</div>
+
+	<section class="mobile-view hide-on-med-and-up">
+		<div class="row mobile-cards center">
+			<div class="col s6 m6 mobile-cards-option">
+				<h6>ENVIAR UN ARCHIVO</h6>
+				<a class="btn-floating blue" data-delay="50"><i class="material-icons">attach_file</i></a>
+			</div>
+			<div class="col s6 m6 mobile-cards-option">
+				<h6>INICIAR UN CHAT</h6>
+				<a class="btn-floating yellow darken-1"><i class="material-icons">chat</i></a>
+			</div>
+		</div>
+		<div class="row mobile-cards center">
+			<div class="col s6 m6 mobile-cards-option">
+				<h6>ENVIAR UN E-MAIL</h6>
+				<a class="btn-floating green"><i class="material-icons">email</i></a>
+			</div>
+			<div class="col s6 m6 mobile-cards-option">
+				<h6>INICIAR UNA <br>VIDEOLLAMADA</h6>
+				<a class="btn-floating red"><i class="material-icons">linked_camera</i></a>
+			</div>
+		</div>
+	</section>
+
 	<footer>
 		<div class="container">
-			<div class="row">
-				<div class="col s12 m12 l12 xl12 footer-display">
-					<i class="tiny material-icons">fiber_manual_record</i>
-					<a href="#">OPTION ONE</a><i class="tiny material-icons">fiber_manual_record</i>
-					<a href="#">OPTION TWO</a><i class="tiny material-icons">fiber_manual_record</i>
-					<a href="#">OPTION THREE</a><i class="tiny material-icons">fiber_manual_record</i>
+			<div class="row center">
+				<div class="col s12 m12 l12 xl12 footer-display center">
 					<img src="assets/img/logo-footer.png" alt="logo-footer">
 				</div>
 			</div>

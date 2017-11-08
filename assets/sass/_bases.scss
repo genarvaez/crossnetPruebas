@@ -4,14 +4,22 @@
 	box-sizing: border-box;
 
 }
-.row .col{
+.row .col, .row, .col{
 	margin: 0;
 	padding: 0;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+
 /*****************************************PRINCIPAL LANDING *********************************/
 body{
-
+	.nav{
+		background: #D2D2D2;
+	}
 	background: whitesmoke;
 	.section-moves{
 		background: whitesmoke;
@@ -28,21 +36,19 @@ body{
 			-webkit-transition: box-shadow 2s;
 		    transition: box-shadow 2s;
 		}
-		.side-menu>*:hover{
+		.side-menu a:hover{
 			-webkit-box-shadow: 5px 5px 5px 5px #DBDBDB;
 			box-shadow: 5px 5px 5px 5px #DBDBDB;
-			bottom: 10px;
+			bottom: 5px;
 			background: white;
 		}
 		.landing-home{
-			
 			.sub-menu-contact ul{
 				background-color: rgba(255, 255, 255, 0.7);
-				
 				border-radius: 5px;
 				display: flex;
 				position: absolute;
-				bottom: 109px;
+				bottom: 85px;
 				li{
 					margin: 10px 20px;
 					display: none;
@@ -68,8 +74,7 @@ body{
 				font-size: .8rem;
 				background-color: rgba(0, 0, 0, 0.8);
 				height: 40vh;
-				border-top-left-radius: 2px;
-				align-text: center;
+				align-text: justify;
 				padding: 10px;
 
 			}
@@ -82,12 +87,31 @@ body{
 	}
 	
 }
+/****************************************VIDEOCALL-SECTION****************************/
+.video-call-section{
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	width: 100%;
+}
+
+
+
+
 /*************************************SECTION CARDS**********************************/
 .section-cards{
+	background-color: #BFEFFF;
 	height: 50vh;
+	.card-option{
+		color: #7a7a7a;
+		border-left: 1px solid #CDE9FF;
+		height: 50vh;
+	}
 	.twitter-card{
 		overflow: scroll;
-		height: 45vh;
+		height: 50vh;
 	}
 }
 
@@ -97,22 +121,8 @@ footer{
 	bottom: 0;
 	background: #3740FA;
 	width: 100%;
-
 	color: $fontColorParagraph;
-	.footer-display{
-		margin-top: 20px;
-		color: white;	
-
-		@include centerContent();
-		justify-content: space-between;
-		a{
-			color: $fontColorParagraph;
-			font-size: 1.3em;
-			-webkit-transition: text-decoration 5s;
-		    transition: text-decoration 5s;
-		}
-		a:hover{
-			text-decoration: underline
-		}
-	}
+	padding-top: 10px;
+	
 }
+

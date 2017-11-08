@@ -1,0 +1,22 @@
+/**************************************MOBILE VIEW********************************/
+.mobile-view{
+	background-color: #B1DBF9;
+	height: 90vh;
+	.mobile-cards-option{
+		display: flex;
+		flex-direction: column;
+		height: 45vh;
+		border: 1px solid whitesmoke;
+		@include centerContent();
+		.btn-floating{
+			margin-top: 20px;
+			padding-top: 10%;
+			width: 40%;
+			height: 40%;
+			i{
+				font-size: 3em;
+				
+			}
+		}
+	}
+}
