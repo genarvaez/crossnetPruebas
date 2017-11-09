@@ -32,21 +32,23 @@ $( document ).ready(function(){
 
    	
    	/*********************************callSession****************************************/
+
+   	//10.14.0.39:8086
    	function enableCall(){
-	   		var configuration = {
-	   	  'webrtc_gateway': 'http://WebRTC.genesyslab.com:8086',
-	   	  'stun_server': 'stun.genesyslab.com:3478',
-	   	  'dtls_srtp' : true
+	   	var configuration = {
+	   		'webrtc_gateway': 'http://10.14.0.39:8086',
+	   		'stun_server': 'stun.genesyslab.com:3478',
+	   		'dtls_srtp' : true
 	   	};
 
 	   	var grtcClient = new Grtc.Client(configuration);
-	   	window.onbeforeunload = function() {
-	   	        grtcClient.disconnect();
-	   	    };
+	   	window.onbeforeunload = function(){
+	   	    grtcClient.disconnect();
+	   	};
 
 
 
-
+	   	
 	   	grtcClient.onMediaSuccess.add(function (obj) {
 	        grtcClient.setViewFromStream(document.getElementById("localView"), obj.stream);
 	        grtcClient.onConnect.add(function () {
@@ -68,4 +70,28 @@ $( document ).ready(function(){
 	    // enable microphone and camera
 	    grtcClient.enableMediaSource();
 	}
+
+	function availableDevices(){
+		navigator.mediaDevices.enumerateDevices()
+		.then(gotDevices)
+		.catch(errorCallback)
+
+		function gotDevices (deviceInfo){
+			if(deviceInfo.length == 0){
+				errorCallback()
+				return false
+			}
+
+			deviceInfo.find(function(device){
+				if(device.kind == "audioinput" || device.kind == "videoinput"){
+					console.log("hay dispositivos disponibles")
+					return true
+				}
+			})
+		}
+		function errorCallback(){
+			alert("no pudimos encontrar dispositivos conectados")
+		}
+	}
+	console.log(availableDevices())
 });
