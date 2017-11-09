@@ -25,7 +25,7 @@ body{
 		background: whitesmoke;
 		height: 45vh;
 		.side-menu{
-			height: 91vh;
+			height: 93vh;
 			background: #D2D2D2;
 			@include centerContent();
 			flex-direction: column;
@@ -37,8 +37,6 @@ body{
 		    transition: box-shadow 2s;
 		}
 		.side-menu a:hover{
-			-webkit-box-shadow: 5px 5px 5px 5px #DBDBDB;
-			box-shadow: 5px 5px 5px 5px #DBDBDB;
 			bottom: 5px;
 			background: white;
 		}
@@ -48,7 +46,8 @@ body{
 				border-radius: 5px;
 				display: flex;
 				position: absolute;
-				bottom: 85px;
+				bottom: 14%;
+				z-index: 100;
 				li{
 					margin: 10px 20px;
 					display: none;
@@ -95,6 +94,16 @@ body{
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.9);
 	width: 100%;
+	.close-video-section{
+		color: #C4C3C3;
+		position: fixed;
+		top: 30px;
+		right: 30px;
+		cursor: pointer;
+	}
+	.close-video-section:hover{
+		color: white;
+	}
 }
 
 
