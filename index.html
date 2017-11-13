@@ -49,7 +49,8 @@
 	  			<div class="sub-menu-contact">
 		  			<ul>
 		  				<li class="sub-menu-option animated">
-		  					<a class="btn-floating blue  tooltipped" data-position="bottom" data-delay="50" data-tooltip="Subir Archivo"><i class="material-icons">attach_file</i></a>
+		  					<input type="file" name="file" id="file" class="inputfile" />
+		  					<label for="file" class="btn-floating blue lighten-1  tooltipped" data-position="bottom" data-delay="50" data-tooltip="ISubir un archivo"><i class="material-icons">attach_file</i></label>
 		  				</li>
 		  				<li class="sub-menu-option animated">
 		  					<a class="btn-floating yellow darken-1  tooltipped" data-position="bottom" data-delay="50" data-tooltip="Iniciar Chat"><i class="material-icons">chat</i>
@@ -98,13 +99,27 @@
 		  			</div>
 		  		</div>
 		  		<section class="video-call-section">
-		  			<div class="row">
-		  				<div class="col m12 l12 xl12 show-medium-and-up">
+		  			<div class="row ">
+		  				<div class="col  m2 offset-m1  l2 offset-l1  xl2 offset-xl1 video-local show-medium-and-up">
+		  					<div class="caller">
+		  						<img src="assets/img/user.png" class="responsive-img" alt="">
+		  					</div>
+		  					<video  id="localView" autoplay="autoplay" class="responsive-img"></video>
+		  					<ul class="available-devices center">
+		  						<li><i class="material-icons" id="video-off">camera_alt</i></li>
+		  						<li><i class="material-icons" id="micro-off">mic</i></li>
+		  						<li><p class="device-inf">Dispositivos de audio/video no disponibles</p></li>
+		  					</ul>
+		  					<button class="btn waves-effect waves-light videocall-button" type="submit" name="action">INICIAR<i class="material-icons right animated rubberBand">phone</i>
+		  					</button>
+		  					
+		  				</div>
+		  				<div class="col m8 l8 xl8 video-remote show-medium-and-up">
+		  					<div class="calle">
+		  						<img src="assets/img/user.png" class="responsive-img" alt="">
+		  					</div>
 		  					<i class="material-icons close-video-section">close</i>
-		  					<video width="160" height="120" id="localView" autoplay="autoplay" controls>
-		  					<span id="localStatus"></span>
-		  					<span id="remoteStatus"></span>
-	  						<video width="160" height="120" id="remoteView" autoplay="autoplay" controls>
+		  					<video width="30%" height="30%" id="remoteView" autoplay="autoplay" ></video>
 		  				</div>
 		  			</div>
 		  		</section>
@@ -116,15 +131,12 @@
 			<div class="col s3 m3 l3 xl3 card-option hoverable twitter-card">
 				<a class="twitter-timeline" data-lang="es" data-theme="dark" data-link-color="#2B7BB9" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>	
-			<div class="col s4 m4 l4 xl4 card-option hoverable center video-call">
-				<h5>SECTION ONE</h5>
-			</div>
-			<div class="col s4 m4 l4 xl4 card-option hoverable center">
-				<h5>SECTION TWO</h5>
+			
+			<div class="col s4 m4 l4 xl4 card-option hoverable center card-3">
+				
 			</div>
 		</div>
 	</section>
-
 	<section class="mobile-view hide-on-med-and-up">
 		<div class="row mobile-cards center">
 			<div class="col s6 m6 mobile-cards-option">
