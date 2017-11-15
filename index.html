@@ -101,15 +101,14 @@
 		  		<section class="video-call-section">
 		  			<div class="row ">
 		  				<div class="col  m2 offset-m1  l2 offset-l1  xl2 offset-xl1 video-local show-medium-and-up">
-		  					<div class="caller">
-		  						<img src="assets/img/user.png" class="responsive-img" alt="">
-		  					</div>
 		  					<video  id="localView" autoplay="autoplay" class="responsive-img"></video>
 		  					<ul class="available-devices center">
 		  						<li><i class="material-icons" id="video-off">camera_alt</i></li>
 		  						<li><i class="material-icons" id="micro-off">mic</i></li>
-		  						<li><p class="device-inf">Dispositivos de audio/video no disponibles</p></li>
+		  						<li><p id="localStatus">Desconectado</p></li></li>
 		  					</ul>
+		  					
+		  					
 		  					<button class="btn waves-effect waves-light videocall-button" type="submit" name="action">INICIAR<i class="material-icons right animated rubberBand">phone</i>
 		  					</button>
 		  					
@@ -120,6 +119,7 @@
 		  					</div>
 		  					<i class="material-icons close-video-section">close</i>
 		  					<video width="30%" height="30%" id="remoteView" autoplay="autoplay" ></video>
+		  					<p id="remoteStatus">Estado remoto</p>
 		  				</div>
 		  			</div>
 		  		</section>
